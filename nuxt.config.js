@@ -1,7 +1,5 @@
 module.exports = {
-    /*
-  ** Headers of the page
-  */
+    ssr: true,
     head: {
         title: 'Banners',
         meta: [
