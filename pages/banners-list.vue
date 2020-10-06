@@ -4,7 +4,7 @@
             <h1 class="title" v-html="params.title"></h1>
             <h2 class="subtitle">Здесь должно быть описание))</h2>
             <div class="links">
-                <a href="/" class="button--grey">Главная</a>
+                <nuxt-link :to="params.link" class="button--grey">Главная</nuxt-link>
                 <app-btn kind="additional">Нажми</app-btn>
             </div>
         </div>
@@ -19,7 +19,11 @@ export default {
         AppBtn,
     },
     data: () => ({
-        params: { title: 'Banners' },
+        params:
+        {
+            title: 'Banners',
+            link: '/',
+        },
     }),
 };
 </script>

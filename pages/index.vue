@@ -5,15 +5,19 @@
             <h1 class="title">Banners</h1>
             <h2 class="subtitle">Здесь должно быть описание)) </h2>
             <div class="links">
-                <a
-                    href="/banners-list"
+                <nuxt-link
+                    :to="params.link"
                     class="button--green"
-                >Documentation</a>
-                <a
-                    href="https://github.com/nuxt/nuxt.js"
+                >
+                    Documentation
+                </nuxt-link>
+                <nuxt-link
+                    to="https://github.com/nuxt/nuxt.js"
                     target="_blank"
                     class="button--grey"
-                >GitHub</a>
+                >
+                    GitHub
+                </nuxt-link>
             </div>
         </div>
     </section>
@@ -26,6 +30,12 @@ export default {
     components: {
         AppLogo,
     },
+    data: () => ({
+        params:
+        {
+            link: '/banners-list',
+        },
+    }),
 };
 </script>
 
